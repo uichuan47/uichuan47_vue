@@ -5,7 +5,8 @@
   <div class="menu">
     <div style="padding-left: 40px;">
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/about?v1=123">About1</RouterLink>
+      <RouterLink :to="{name:'about',query:{v2:456}}">About2</RouterLink>
     </div>
   </div>
   <div class="container">

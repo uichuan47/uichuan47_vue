@@ -19,6 +19,18 @@
 import {onMounted, ref} from "vue";
 import axios from "axios";
 
+// 通过url传递参数
+import {useRoute,onBeforeRouteUpdate} from "vue-router";
+const route = useRoute()
+console.log(route.query)
+//通过onBeforeRouteUpdate记录from，to
+onBeforeRouteUpdate(function (to,from)
+{
+  console.log(from,to)
+})
+
+
+// 通过axios发送get请求，获取数据
 const data_list = ref([])
 onMounted(function (){
   //使用axios发送请求
